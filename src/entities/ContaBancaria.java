@@ -40,4 +40,11 @@ public class ContaBancaria {
              this.saldo += valor;
          }
     }
+
+    public String toString() {
+        return String.format("\nDados da conta: \n"
+        + "Conta: " + numeroConta
+        + ", Titular: " + titular
+        + ", Saldo: " + saldo);
+    }
 }
