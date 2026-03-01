@@ -40,6 +40,11 @@ public class ContaBancaria {
              this.saldo += valor;
          }
     }
+    public void saque(double valor) {
+        if (Double.isFinite(valor) && valor > 0.0) {
+            this.saldo -= valor + TAXA_SAQUE;
+        }
+    }
 
     public String toString() {
         return String.format("\nDados da conta: \n"
