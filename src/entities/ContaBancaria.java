@@ -48,8 +48,8 @@ public class ContaBancaria {
 
     public String toString() {
         return String.format(
-         "Conta: " + numeroConta
-        + ", Titular: " + titular
-        + ", Saldo: %.2f" , saldo);
+         "Conta: %d, Titular: %s, Saldo: R$%.2f",
+                numeroConta, titular, saldo
+                );
     }
 }
