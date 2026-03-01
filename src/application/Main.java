@@ -32,7 +32,7 @@ public class Main {
             conta = new ContaBancaria(numeroConta, titular);
         }
 
-        System.out.print(conta + "\n");
+        System.out.print("\nDados da conta: \n" + conta);
 
         do {
             System.out.print("\nDeseja fazer um depósito adicional (s/n)? ");
@@ -48,7 +48,24 @@ public class Main {
 
         } while (deposito.equals("s"));
 
-        System.out.print(conta);
+        System.out.print("\nDados atualizados: \n" + conta);
+
+        System.out.print("\nDeseja fazer um saque? ");
+        String saque = sc.nextLine().trim().toLowerCase();
+
+        if (saque.equals("s")) {
+            System.out.print("Digite o valor do saque: ");
+            double valorSaque = sc.nextDouble();
+            sc.nextLine();
+
+            conta.saque(valorSaque);
+            System.out.print("Saque realizado com taxa de R$5.00 aplicada.\n");
+        }
+        else {
+            System.out.print("Nenhum saque realizado.\n");
+        }
+
+        System.out.print("\nDados atualizados: \n" + conta);
 
         sc.close();
     }
