@@ -45,6 +45,6 @@ public class ContaBancaria {
         return String.format("\nDados da conta: \n"
         + "Conta: " + numeroConta
         + ", Titular: " + titular
-        + ", Saldo: " + saldo);
+        + ", Saldo: %.2f" , saldo);
     }
 }
